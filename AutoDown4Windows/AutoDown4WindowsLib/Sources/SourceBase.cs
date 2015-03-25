@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace AutoDown4WindowsLib.Sources
 {
-    public class SourceBase : ISource
+    public abstract class SourceBase : ISource
     {
-        public void Initialize(SourceSettings settings)
-        {
+        SourceSettings settings { get; set; }
 
+        public virtual void Initialize(SourceSettings settings)
+        {
+            this.settings = settings;
         }
+
+        public abstract void Connect();
+        
     }
 }

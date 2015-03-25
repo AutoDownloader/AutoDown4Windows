@@ -8,6 +8,19 @@ namespace AutoDown4WindowsLib.Sources
 {
     public class IrcSource : SourceBase
     {
+        IrcSettings ircSettings { get; set; }
+
+        public override void Initialize(SourceSettings settings)
+        {
+            base.Initialize(settings);
+            ircSettings = settings as IrcSettings;
+        }
+
+        public override void Connect()
+        {
+            
+        }
+      
      
     }
 
@@ -16,5 +29,7 @@ namespace AutoDown4WindowsLib.Sources
         public string Server { get; set; }
         public int Port { get; set; }
         public string UserName { get; set; }
+        public string Channel { get; set; }
+        public List<string> Commands { get; set; }
     }
 }

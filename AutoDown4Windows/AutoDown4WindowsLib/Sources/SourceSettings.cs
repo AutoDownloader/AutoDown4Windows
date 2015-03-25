@@ -8,9 +8,6 @@ namespace AutoDown4WindowsLib.Sources
 {
     public class SourceSettings
     {
-        public void Initialize(SourceSettings settings)
-        {
-
-        }
+      
     }
 }

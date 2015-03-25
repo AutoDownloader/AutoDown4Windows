@@ -9,5 +9,6 @@ namespace AutoDown4WindowsLib.Sources
     public interface ISource
     {
         void Initialize(SourceSettings settings);
+        void Connect();
     }
 }
